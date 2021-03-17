@@ -35,9 +35,6 @@ namespace Clock
                 Minute.SetMinute();
                 Hour.SetHour();
 
-                //Program.Var.ClockChar[37] = @"*"; //1
-                //Program.Var.ClockChar[86] = @"*"; //2
-
                 Var.Display.Clear();
                 Var.ClockChar.ForEach(Item => Var.Display.Append(Item));
 
