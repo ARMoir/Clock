@@ -16,7 +16,6 @@ namespace Clock
             public static int Minutes { get; set; } = 0;
             public static int Minute { get; set; } = 0;
             public static int Seconds { get; set; } = 0;
-            public static int Count { get; set; } = 0;
         }
 
         public static void Main(string[] args)
@@ -26,15 +25,13 @@ namespace Clock
 
             do
             {
-                Var.Count++;
-
                 Var.ClockChar.Clear();
                 Var.ClockChar.AddRange(Var.ClockString.ToString().Select(Chars => Chars.ToString()));
 
-                Var.Hours = Int32.Parse(DateTime.Now.ToString("hh"));
-                Var.Minutes = Int32.Parse(DateTime.Now.ToString("mm"));
-                Var.Minute = Int32.Parse(DateTime.Now.ToString("mm").Substring(1, 1));
-                Var.Seconds = Int32.Parse(DateTime.Now.ToString("ss"));
+                Var.Hours = DateTime.Now.Hour;
+                Var.Minutes = DateTime.Now.Minute;
+                Var.Seconds = DateTime.Now.Second;
+                Var.Minute = Var.Minutes % 10;
 
                 Minute.SetMinute();
                 Hour.SetHour();
