@@ -14,6 +14,8 @@ namespace Clock
             public static StringBuilder Display { get; set; } = new StringBuilder();
             public static int Hours { get; set; } = 0;
             public static int Minutes { get; set; } = 0;
+            public static int Minute { get; set; } = 0;
+            public static int Seconds { get; set; } = 0;
             public static int Count { get; set; } = 0;
         }
 
@@ -31,15 +33,19 @@ namespace Clock
 
                 Var.Hours = Int32.Parse(DateTime.Now.ToString("hh"));
                 Var.Minutes = Int32.Parse(DateTime.Now.ToString("mm"));
+                Var.Minute = Int32.Parse(DateTime.Now.ToString("mm").Substring(1, 1));
+                Var.Seconds = Int32.Parse(DateTime.Now.ToString("ss"));
 
                 Minute.SetMinute();
                 Hour.SetHour();
+                Second.SetSecond();
 
                 Var.Display.Clear();
                 Var.ClockChar.ForEach(Item => Var.Display.Append(Item));
 
                 Console.CursorVisible = false;
                 Console.Clear();
+
                 Console.Write(Var.Display);
 
                 System.Threading.Thread.Sleep(1000);
