@@ -7,7 +7,7 @@ namespace Clock
 {
     class Program
     {
-        public static class Var
+        public static class Globals
         {
             public static List<string> ClockChar { get; set; } = new List<string>();
             public static StringBuilder ClockString { get; set; } = new StringBuilder();
@@ -21,32 +21,32 @@ namespace Clock
         public static void Main(string[] args)
         {
             Console.CursorVisible = false;
+
             Face.SetFace();
 
             do
             {
-                Var.ClockChar.Clear();
-                Var.ClockChar.AddRange(Var.ClockString.ToString().Select(Chars => Chars.ToString()));
+                Globals.ClockChar.Clear();
+                Globals.ClockChar.AddRange(Globals.ClockString.ToString().Select(Chars => Chars.ToString()));
 
-                Var.Hours = DateTime.Now.Hour;
-                Var.Minutes = DateTime.Now.Minute;
-                Var.Seconds = DateTime.Now.Second;
-                Var.Minute = Var.Minutes % 10;
+                Globals.Hours = DateTime.Now.Hour;
+                Globals.Minutes = DateTime.Now.Minute;
+                Globals.Seconds = DateTime.Now.Second;
+                Globals.Minute = Globals.Minutes % 10;
 
                 Minute.SetMinute();
                 Hour.SetHour();
                 Second.SetSecond();
 
-                Var.Display.Clear();
-                Var.ClockChar.ForEach(Item => Var.Display.Append(Item));
+                Globals.Display.Clear();
+                Globals.ClockChar.ForEach(Item => Globals.Display.Append(Item));
 
                 Console.Clear();
-                Console.Write(Var.Display);
+                Console.Write(Globals.Display);
 
                 System.Threading.Thread.Sleep(1000);
 
-            } while (true);
-            
+            } while (true);  
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Clock
     {
         public static void SetMinute()
         {
-            switch (Program.Var.Minutes)
+            switch (Program.Globals.Minutes)
             {
 
                 case int n when (n >= 55):
@@ -63,89 +63,89 @@ namespace Clock
 
         public static void M1()
         {
-            Program.Var.ClockChar[60] = @"M"; 
-            Program.Var.ClockChar[82] = @"/"; 
-            Program.Var.ClockChar[104] = @"/"; 
+            Program.Globals.ClockChar[60] = @"M"; 
+            Program.Globals.ClockChar[82] = @"/"; 
+            Program.Globals.ClockChar[104] = @"/"; 
         }
 
         public static void M2()
         {
-            Program.Var.ClockChar[85] = @"M"; 
-            Program.Var.ClockChar[107] = @"/"; 
-            Program.Var.ClockChar[128] = @"/"; 
+            Program.Globals.ClockChar[85] = @"M"; 
+            Program.Globals.ClockChar[107] = @"/"; 
+            Program.Globals.ClockChar[128] = @"/"; 
 
         }
         public static void M3()
         {
-            Program.Var.ClockChar[154] = @"M"; 
-            Program.Var.ClockChar[153] = @"-"; 
-            Program.Var.ClockChar[152] = @"-"; 
-            Program.Var.ClockChar[151] = @"-"; 
+            Program.Globals.ClockChar[154] = @"M"; 
+            Program.Globals.ClockChar[153] = @"-"; 
+            Program.Globals.ClockChar[152] = @"-"; 
+            Program.Globals.ClockChar[151] = @"-"; 
         }
 
         public static void M4()
         {
-            Program.Var.ClockChar[223] = @"M"; 
-            Program.Var.ClockChar[199] = @"\"; 
-            Program.Var.ClockChar[174] = @"\"; 
+            Program.Globals.ClockChar[223] = @"M"; 
+            Program.Globals.ClockChar[199] = @"\"; 
+            Program.Globals.ClockChar[174] = @"\"; 
         }
 
         public static void M5()
         {
 
-            Program.Var.ClockChar[244] = @"M"; 
-            Program.Var.ClockChar[220] = @"\"; 
-            Program.Var.ClockChar[196] = @"\"; 
+            Program.Globals.ClockChar[244] = @"M"; 
+            Program.Globals.ClockChar[220] = @"\"; 
+            Program.Globals.ClockChar[196] = @"\"; 
         }
         public static void M6()
         {
-            Program.Var.ClockChar[240] = @"M";
-            Program.Var.ClockChar[217] = @"|"; 
-            Program.Var.ClockChar[194] = @"|"; 
+            Program.Globals.ClockChar[240] = @"M";
+            Program.Globals.ClockChar[217] = @"|"; 
+            Program.Globals.ClockChar[194] = @"|"; 
         }
 
         public static void M7()
         {
-            Program.Var.ClockChar[236] = @"M"; 
-            Program.Var.ClockChar[214] = @"/"; 
-            Program.Var.ClockChar[192] = @"/"; 
+            Program.Globals.ClockChar[236] = @"M"; 
+            Program.Globals.ClockChar[214] = @"/"; 
+            Program.Globals.ClockChar[192] = @"/"; 
         }
 
         public static void M8()
         {
-            Program.Var.ClockChar[211] = @"M"; 
-            Program.Var.ClockChar[189] = @"/"; 
-            Program.Var.ClockChar[168] = @"/"; 
+            Program.Globals.ClockChar[211] = @"M"; 
+            Program.Globals.ClockChar[189] = @"/"; 
+            Program.Globals.ClockChar[168] = @"/"; 
         }
 
         public static void M9()
         {
-            Program.Var.ClockChar[142] = @"M"; 
-            Program.Var.ClockChar[143] = @"-"; 
-            Program.Var.ClockChar[144] = @"-"; 
-            Program.Var.ClockChar[145] = @"-"; 
+            Program.Globals.ClockChar[142] = @"M"; 
+            Program.Globals.ClockChar[143] = @"-"; 
+            Program.Globals.ClockChar[144] = @"-"; 
+            Program.Globals.ClockChar[145] = @"-"; 
         }
 
         public static void M10()
         {
 
-            Program.Var.ClockChar[73] = @"M"; 
-            Program.Var.ClockChar[97] = @"\"; 
-            Program.Var.ClockChar[122] = @"\"; 
+            Program.Globals.ClockChar[73] = @"M"; 
+            Program.Globals.ClockChar[97] = @"\"; 
+            Program.Globals.ClockChar[122] = @"\"; 
         }
 
         public static void M11()
         {
-            Program.Var.ClockChar[52] = @"M";
-            Program.Var.ClockChar[76] = @"\"; 
-            Program.Var.ClockChar[100] = @"\"; 
+            Program.Globals.ClockChar[52] = @"M";
+            Program.Globals.ClockChar[76] = @"\"; 
+            Program.Globals.ClockChar[100] = @"\"; 
         }
 
         public static void M12()
         {
-            Program.Var.ClockChar[56] = @"M"; 
-            Program.Var.ClockChar[79] = @"|"; 
-            Program.Var.ClockChar[102] = @"|"; 
+            Program.Globals.ClockChar[56] = @"M"; 
+            Program.Globals.ClockChar[79] = @"|"; 
+            Program.Globals.ClockChar[102] = @"|"; 
         }
     }
 }

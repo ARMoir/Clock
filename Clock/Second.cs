@@ -9,9 +9,9 @@ namespace Clock
         public static void SetSecond()
         {
 
-            if (Program.Var.Seconds % 2 == 0)
+            if (Program.Globals.Seconds % 2 == 0)
             {
-                switch (Program.Var.Minute)
+                switch (Program.Globals.Minute)
                 {
                     case 0:
                         S0();
@@ -58,52 +58,52 @@ namespace Clock
 
         public static void S1()
         {
-            Program.Var.ClockChar[37] = @"*"; 
+            Program.Globals.ClockChar[37] = @"*"; 
         }
 
         public static void S2()
         {
-            Program.Var.ClockChar[86] = @"*"; 
+            Program.Globals.ClockChar[86] = @"*"; 
         }
 
         public static void S3()
         {
-            Program.Var.ClockChar[155] = @"*";
+            Program.Globals.ClockChar[155] = @"*";
         }
 
         public static void S4()
         {
-            Program.Var.ClockChar[224] = @"*";
+            Program.Globals.ClockChar[224] = @"*";
         }
 
         public static void S5()
         {
-            Program.Var.ClockChar[267] = @"*";
+            Program.Globals.ClockChar[267] = @"*";
         }
 
         public static void S6()
         {
-            Program.Var.ClockChar[263] = @"*";
+            Program.Globals.ClockChar[263] = @"*";
         }
 
         public static void S7()
         {
-            Program.Var.ClockChar[259] = @"*";
+            Program.Globals.ClockChar[259] = @"*";
         }
 
         public static void S8()
         {
-            Program.Var.ClockChar[210] = @"*"; 
+            Program.Globals.ClockChar[210] = @"*"; 
         }
 
         public static void S9()
         {
-            Program.Var.ClockChar[141] = @"*";
+            Program.Globals.ClockChar[141] = @"*";
         }
 
         public static void S0()
         {
-            Program.Var.ClockChar[148] = @"*";
+            Program.Globals.ClockChar[148] = @"*";
         }
 
     }
