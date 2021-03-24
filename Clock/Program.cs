@@ -20,7 +20,7 @@ namespace Clock
 
         public static void Main(string[] args)
         {
-
+            Console.CursorVisible = false;
             Face.SetFace();
 
             do
@@ -40,9 +40,7 @@ namespace Clock
                 Var.Display.Clear();
                 Var.ClockChar.ForEach(Item => Var.Display.Append(Item));
 
-                Console.CursorVisible = false;
                 Console.Clear();
-
                 Console.Write(Var.Display);
 
                 System.Threading.Thread.Sleep(1000);
