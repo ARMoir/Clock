@@ -29,9 +29,10 @@ namespace Clock
                 Globals.ClockChar.Clear();
                 Globals.ClockChar.AddRange(Globals.ClockString.ToString().Select(Chars => Chars.ToString()));
 
-                Globals.Hours = DateTime.Now.Hour;
-                Globals.Minutes = DateTime.Now.Minute;
-                Globals.Seconds = DateTime.Now.Second;
+                var Time = DateTime.Now;
+                Globals.Hours = Time.Hour;
+                Globals.Minutes = Time.Minute;
+                Globals.Seconds = Time.Second;
                 Globals.Minute = Globals.Minutes % 10;
 
                 Minute.SetMinute();
