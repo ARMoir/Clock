@@ -10,7 +10,7 @@ namespace Clock
         {
             if(Program.Globals.Hours > 12)
             {
-                Program.Globals.Hours = Program.Globals.Hours - 12;
+                Program.Globals.Hours -= 12;
             }
 
             switch (Program.Globals.Hours)
