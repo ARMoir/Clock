@@ -8,19 +8,19 @@ namespace Clock
     {
         public static void SetFace()
         {
-            Program.Globals.ClockString.Append("   ~-------------~   " + System.Environment.NewLine);
-            Program.Globals.ClockString.Append(" ('..'11..12..1'..') " + System.Environment.NewLine);
-            Program.Globals.ClockString.Append("| :               : |" + System.Environment.NewLine);
-            Program.Globals.ClockString.Append("| :10            2: |" + System.Environment.NewLine);
-            Program.Globals.ClockString.Append("| :               : |" + System.Environment.NewLine);
-            Program.Globals.ClockString.Append("| :               : |" + System.Environment.NewLine);
-            Program.Globals.ClockString.Append("| :9      @      3: |" + System.Environment.NewLine);
-            Program.Globals.ClockString.Append("| :               : |" + System.Environment.NewLine);
-            Program.Globals.ClockString.Append("| :               : |" + System.Environment.NewLine);
-            Program.Globals.ClockString.Append("| :8             4: |" + System.Environment.NewLine);
-            Program.Globals.ClockString.Append("| :               : |" + System.Environment.NewLine);
-            Program.Globals.ClockString.Append(" ('..'7...6...5'..') " + System.Environment.NewLine);
-            Program.Globals.ClockString.Append("   ~-------------~   " + System.Environment.NewLine);
+            Program.Clock.ClockString.Append("   ~-------------~    " + (Char)10);
+            Program.Clock.ClockString.Append(" ('..'11..12..1'..')  " + (Char)10);
+            Program.Clock.ClockString.Append("| :               : | " + (Char)10);
+            Program.Clock.ClockString.Append("| :10            2: | " + (Char)10);
+            Program.Clock.ClockString.Append("| :               : | " + (Char)10);
+            Program.Clock.ClockString.Append("| :               : | " + (Char)10);
+            Program.Clock.ClockString.Append("| :9      @      3: | " + (Char)10);
+            Program.Clock.ClockString.Append("| :               : | " + (Char)10);
+            Program.Clock.ClockString.Append("| :               : | " + (Char)10);
+            Program.Clock.ClockString.Append("| :8             4: | " + (Char)10);
+            Program.Clock.ClockString.Append("| :               : | " + (Char)10);
+            Program.Clock.ClockString.Append(" ('..'7...6...5'..')  " + (Char)10);
+            Program.Clock.ClockString.Append("   ~-------------~    " + (Char)10);
         }
     }
 }

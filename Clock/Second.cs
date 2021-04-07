@@ -9,9 +9,9 @@ namespace Clock
         public static void SetSecond()
         {
 
-            if (Program.Globals.Seconds % 2 == 0)
+            if (Program.Clock.Seconds % 2 == 0)
             {
-                switch (Program.Globals.Minute)
+                switch (Program.Clock.Minute)
                 {
                     case 0:
                         S0();
@@ -58,52 +58,52 @@ namespace Clock
 
         public static void S1()
         {
-            Program.Globals.ClockChar[37] = @"*"; 
+            Program.Clock.ClockChar[37] = @"*"; 
         }
 
         public static void S2()
         {
-            Program.Globals.ClockChar[86] = @"*"; 
+            Program.Clock.ClockChar[86] = @"*"; 
         }
 
         public static void S3()
         {
-            Program.Globals.ClockChar[155] = @"*";
+            Program.Clock.ClockChar[155] = @"*";
         }
 
         public static void S4()
         {
-            Program.Globals.ClockChar[224] = @"*";
+            Program.Clock.ClockChar[224] = @"*";
         }
 
         public static void S5()
         {
-            Program.Globals.ClockChar[267] = @"*";
+            Program.Clock.ClockChar[267] = @"*";
         }
 
         public static void S6()
         {
-            Program.Globals.ClockChar[263] = @"*";
+            Program.Clock.ClockChar[263] = @"*";
         }
 
         public static void S7()
         {
-            Program.Globals.ClockChar[259] = @"*";
+            Program.Clock.ClockChar[259] = @"*";
         }
 
         public static void S8()
         {
-            Program.Globals.ClockChar[210] = @"*"; 
+            Program.Clock.ClockChar[210] = @"*"; 
         }
 
         public static void S9()
         {
-            Program.Globals.ClockChar[141] = @"*";
+            Program.Clock.ClockChar[141] = @"*";
         }
 
         public static void S0()
         {
-            Program.Globals.ClockChar[148] = @"*";
+            Program.Clock.ClockChar[148] = @"*";
         }
 
     }

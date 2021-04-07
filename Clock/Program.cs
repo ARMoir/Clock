@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Clock
 {
     class Program
     {
-        public static class Globals
+        public static class Clock
         {
             public static List<string> ClockChar { get; set; } = new List<string>();
             public static StringBuilder ClockString { get; set; } = new StringBuilder();
@@ -20,30 +21,35 @@ namespace Clock
 
         public static void Main(string[] args)
         {
-            Console.CursorVisible = false;
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                Console.SetWindowSize(21, 14);
+            }
 
+            Console.CursorVisible = false;
             Face.SetFace();
+            var Time = DateTime.Now;
 
             do
             {
-                Globals.ClockChar.Clear();
-                Globals.ClockChar.AddRange(Globals.ClockString.ToString().Select(Chars => Chars.ToString()));
+                Clock.ClockChar.Clear();
+                Clock.ClockChar.AddRange(Clock.ClockString.ToString().Select(Chars => Chars.ToString()));
 
-                var Time = DateTime.Now;
-                Globals.Hours = Time.Hour;
-                Globals.Minutes = Time.Minute;
-                Globals.Seconds = Time.Second;
-                Globals.Minute = Globals.Minutes % 10;
+                Time = DateTime.Now;
+                Clock.Hours = Time.Hour;
+                Clock.Minutes = Time.Minute;
+                Clock.Seconds = Time.Second;
+                Clock.Minute = Clock.Minutes % 10;
 
                 Minute.SetMinute();
                 Hour.SetHour();
                 Second.SetSecond();
 
-                Globals.Display.Clear();
-                Globals.ClockChar.ForEach(Item => Globals.Display.Append(Item));
+                Clock.Display.Clear();
+                Clock.ClockChar.ForEach(Item => Clock.Display.Append(Item));
 
                 Console.Clear();
-                Console.Write(Globals.Display);
+                Console.Write(Clock.Display);
 
                 System.Threading.Thread.Sleep(1000);
 

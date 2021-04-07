@@ -8,12 +8,12 @@ namespace Clock
     {
         public static void SetHour()
         {
-            if(Program.Globals.Hours > 12)
+            if(Program.Clock.Hours > 12)
             {
-                Program.Globals.Hours -= 12;
+                Program.Clock.Hours -= 12;
             }
 
-            switch (Program.Globals.Hours)
+            switch (Program.Clock.Hours)
             {
                 case 1:
                     H1();
@@ -67,76 +67,76 @@ namespace Clock
 
         public static void H1()
         {
-            Program.Globals.ClockChar[82] = @"H"; 
-            Program.Globals.ClockChar[104] = @"/"; 
+            Program.Clock.ClockChar[82] = @"H"; 
+            Program.Clock.ClockChar[104] = @"/"; 
         }
 
         public static void H2()
         {
-            Program.Globals.ClockChar[107] = @"H"; 
-            Program.Globals.ClockChar[128] = @"/"; 
+            Program.Clock.ClockChar[107] = @"H"; 
+            Program.Clock.ClockChar[128] = @"/"; 
         }
         public static void H3()
         {
-            Program.Globals.ClockChar[153] = @"H"; 
-            Program.Globals.ClockChar[152] = @"-"; 
-            Program.Globals.ClockChar[151] = @"-";     
+            Program.Clock.ClockChar[153] = @"H"; 
+            Program.Clock.ClockChar[152] = @"-"; 
+            Program.Clock.ClockChar[151] = @"-";     
         }
 
         public static void H4()
         {
-            Program.Globals.ClockChar[199] = @"H"; 
-            Program.Globals.ClockChar[174] = @"\"; 
+            Program.Clock.ClockChar[199] = @"H"; 
+            Program.Clock.ClockChar[174] = @"\"; 
         }
 
         public static void H5()
         {
 
-            Program.Globals.ClockChar[220] = @"H"; 
-            Program.Globals.ClockChar[196] = @"\"; 
+            Program.Clock.ClockChar[220] = @"H"; 
+            Program.Clock.ClockChar[196] = @"\"; 
         }
 
         public static void H6()
         {
-            Program.Globals.ClockChar[217] = @"H"; 
-            Program.Globals.ClockChar[194] = @"|"; 
+            Program.Clock.ClockChar[217] = @"H"; 
+            Program.Clock.ClockChar[194] = @"|"; 
         }
 
         public static void H7()
         {
-            Program.Globals.ClockChar[214] = @"H"; 
-            Program.Globals.ClockChar[192] = @"/"; 
+            Program.Clock.ClockChar[214] = @"H"; 
+            Program.Clock.ClockChar[192] = @"/"; 
         }
 
         public static void H8()
         {
-            Program.Globals.ClockChar[189] = @"H"; 
-            Program.Globals.ClockChar[168] = @"/"; 
+            Program.Clock.ClockChar[189] = @"H"; 
+            Program.Clock.ClockChar[168] = @"/"; 
         }
 
         public static void H9()
         {
-            Program.Globals.ClockChar[143] = @"H"; 
-            Program.Globals.ClockChar[144] = @"-"; 
-            Program.Globals.ClockChar[145] = @"-"; 
+            Program.Clock.ClockChar[143] = @"H"; 
+            Program.Clock.ClockChar[144] = @"-"; 
+            Program.Clock.ClockChar[145] = @"-"; 
         }
 
         public static void H10()
         {
-            Program.Globals.ClockChar[97] = @"H"; 
-            Program.Globals.ClockChar[122] = @"\"; 
+            Program.Clock.ClockChar[97] = @"H"; 
+            Program.Clock.ClockChar[122] = @"\"; 
         }
 
         public static void H11()
         {
-            Program.Globals.ClockChar[76] = @"H"; 
-            Program.Globals.ClockChar[100] = @"\"; 
+            Program.Clock.ClockChar[76] = @"H"; 
+            Program.Clock.ClockChar[100] = @"\"; 
         }
 
         public static void H12()
         {
-            Program.Globals.ClockChar[79] = @"H"; 
-            Program.Globals.ClockChar[102] = @"|"; 
+            Program.Clock.ClockChar[79] = @"H"; 
+            Program.Clock.ClockChar[102] = @"|"; 
         }
     }
 }
