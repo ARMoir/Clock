@@ -23,7 +23,7 @@ namespace Clock
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                Console.SetWindowSize(21, 14);
+                Console.SetWindowSize(22, 14);
             }
 
             Console.CursorVisible = false;
@@ -48,7 +48,7 @@ namespace Clock
                 Clock.Display.Clear();
                 Clock.ClockChar.ForEach(Item => Clock.Display.Append(Item));
 
-                Console.Clear();
+                Console.SetCursorPosition(0, 0);
                 Console.Write(Clock.Display);
 
                 System.Threading.Thread.Sleep(1000);
