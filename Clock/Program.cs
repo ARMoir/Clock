@@ -28,6 +28,7 @@ namespace Clock
             }
 
             //Setup the Clock Face
+            Console.Clear();
             Console.CursorVisible = false;
             Face.SetFace();
 
