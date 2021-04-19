@@ -21,36 +21,44 @@ namespace Clock
 
         public static void Main(string[] args)
         {
+            //Resize Window in Windows
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 Console.SetWindowSize(22, 14);
             }
 
+            //Setup the Clock Face
             Console.CursorVisible = false;
             Face.SetFace();
-            var Time = DateTime.Now;
 
+            //Clock Loop
             do
             {
+                //Populate ClockChar
                 Clock.ClockChar.Clear();
                 Clock.ClockChar.AddRange(Clock.ClockString.ToString().Select(Chars => Chars.ToString()));
 
-                Time = DateTime.Now;
+                //Get the Current Time
+                var Time = DateTime.Now;
                 Clock.Hours = Time.Hour;
                 Clock.Minutes = Time.Minute;
                 Clock.Seconds = Time.Second;
                 Clock.Minute = Clock.Minutes % 10;
 
+                //Set time to Clock
                 Minute.SetMinute();
                 Hour.SetHour();
                 Second.SetSecond();
 
+                //Populate Display values
                 Clock.Display.Clear();
                 Clock.ClockChar.ForEach(Item => Clock.Display.Append(Item));
 
+                //Write Dsplay to Console
                 Console.SetCursorPosition(0, 0);
                 Console.Write(Clock.Display);
 
+                //Wait one Second
                 System.Threading.Thread.Sleep(1000);
 
             } while (true);  
