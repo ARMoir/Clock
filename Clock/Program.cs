@@ -33,7 +33,7 @@ namespace Clock
             Face.SetFace();
 
             //Clock Loop
-            do
+            while (true)
             {
                 //Populate ClockChar
                 Clock.ClockChar.Clear();
@@ -62,7 +62,7 @@ namespace Clock
                 //Wait one Second
                 System.Threading.Thread.Sleep(1000);
 
-            } while (true);  
+            };  
         }
     }
 }
